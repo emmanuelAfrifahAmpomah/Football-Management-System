@@ -19,9 +19,10 @@ use App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
+// Home Page Routes
 Route::get('/', [HomeController::class, 'index']);
-
 Route::get('/home', [HomeController::class, 'redirect']);
+// Route::get('/registration', [HomeController::class, 'registration'])->name('page_register');
 
 Route::middleware([
     'auth:sanctum',
