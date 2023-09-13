@@ -6,12 +6,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
+
 class HomeController extends Controller
 {
     // HOMEPAGE URL
     public function index()
     {
-        return view('auth.register');
+        if(Auth::id())
+        {
+            return redirect('home');
+        }
+
+        else
+        {
+            return view('auth.register');
+        }
     }
 
     // // REGISTERATION PAGE URL
@@ -33,14 +42,14 @@ class HomeController extends Controller
     public function redirect() {
         if(Auth::id())
         {
-            if(Auth::user()->user_type == 'users')
+            if(Auth::user())
             {
-                return view('front.blog');
+                return view('admin.home');
             }
 
             else
             {
-                return view('admin.home');
+                return redirect('auth.register')->withErrors('Login failed');
             }
         }
 

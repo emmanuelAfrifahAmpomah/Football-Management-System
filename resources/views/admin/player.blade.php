@@ -602,7 +602,172 @@
 		<!--**********************************
             Content body start
         ***********************************-->
-		@include('admin.body')
+        <div class="content-body">
+            <div class="container-fluid">
+				
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Player Details</h4>
+                            </div>
+                            <div class="card-body">
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">BIO DETAILS</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">PHYSICAL DETAILS</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">TECHNICAL DETAILS</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">TACTICAL DETAILS</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">PSYCHOLOGICAL DETAILS</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">SOCIAL DETAILS</button>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                                  </div>
+                                <div class="form-validation">
+                                    <form class="needs-validation" novalidate >
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Player Name
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+														<input type="text" class="form-control" id="validationCustom01"  placeholder="Enter a username.." required>
+														<div class="invalid-feedback">
+															Please enter a player name.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom02">Age <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="validationCustom09"  placeholder="" required>
+														<div class="invalid-feedback">
+															.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom02">Height <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="number" min="1" class="form-control" id="validationCustom09"  placeholder="" required>
+														<div class="invalid-feedback">
+															.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom02">Weight <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="number" min="1" class="form-control" id="validationCustom09"  placeholder="" required>
+														<div class="invalid-feedback">
+															.
+														</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom05">Position Played
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <select class="default-select wide form-control" id="validationCustom05">
+                                                            <option  data-display="Select">Please Select</option>
+                                                            <option  data-display="Select">Forward</option>
+                                                            <option  data-display="Select">Goalkeeper</option>
+                                                            <option  data-display="Select">Forward</option>
+                                                            <option  data-display="Select">Forward</option>
+                                                            <option value="html">Defender</option>
+                                                        </select>
+														<div class="invalid-feedback">
+															Please select a one.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom09">Goals <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="validationCustom09"  placeholder="Goals scored" required>
+														<div class="invalid-feedback">
+															How many goals scored.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom09">Player ratings <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="validationCustom09"  placeholder="player ratings" required>
+														<div class="invalid-feedback">
+															How many goals scored.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom09">Injuries <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="validationCustom09"  placeholder="5" required>
+														<div class="invalid-feedback">
+															How many injuries.
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label"><a
+                                                            href="javascript:void()">Terms &amp; Conditions</a> <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-8">
+                                                        <div class="form-check">
+														  <input class="form-check-input" type="checkbox" value="" id="validationCustom12" required>
+														  <label class="form-check-label" for="validationCustom12">
+															Agree to terms and conditions
+														  </label>
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <div class="col-lg-8 ms-auto">
+                                                        <button type="submit" class="bg-primary btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--**********************************
             Content body end
         ***********************************-->
